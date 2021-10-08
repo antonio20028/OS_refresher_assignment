@@ -34,7 +34,7 @@ void inorder(struct BSTNode *root) {
 
 //help function, to help us organize the tree when we delete or insert a new node
 
-struct BSTNode* find_max_element(struct BSTNode *root) {
+struct BSTNode *find_max_element(struct BSTNode *root) {
 
     if (root == NULL) {
         return NULL;
@@ -47,7 +47,7 @@ struct BSTNode* find_max_element(struct BSTNode *root) {
     return root;
 };
 
-struct BSTNode* insert(struct BSTNode *root, int data) {
+struct BSTNode *insert(struct BSTNode *root, int data) {
 
     if (root == NULL) {
         root = malloc(sizeof(struct BSTNode));
@@ -66,7 +66,7 @@ struct BSTNode* insert(struct BSTNode *root, int data) {
 
 };
 
-struct BSTNode* delete_element(struct BSTNode *root, int data) {
+struct BSTNode *delete_element(struct BSTNode *root, int data) {
     struct BSTNode *aux;
 
     //if element not found, search in right child and left child
@@ -81,7 +81,7 @@ struct BSTNode* delete_element(struct BSTNode *root, int data) {
         //there is only the root node, clear the memory and return null
         if (root->right == NULL && root->left == NULL) {
             free(root);
-            return;
+            return NULL;
         } else if (root->right == NULL || root->left) {
             //element found but there is only one child
             aux = root;
@@ -104,7 +104,7 @@ struct BSTNode* delete_element(struct BSTNode *root, int data) {
 int main(int argc, char **argv)
 {
     struct BSTNode *root;
-    root = create_node(root);
+    root = create_node(20);
     insert(root, 19);
     insert(root, 20);
     insert(root, 5);

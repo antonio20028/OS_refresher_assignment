@@ -7,7 +7,7 @@ of the programs in this assignment.
 # IMPORTANT: use make permission if you face any problem with permissions
 
 ## For assignment 01, 02, and 03:
-	use Makefile to create necessaries object to compile and execute all  
+	use Makefile to create necessaries object to compile and execute all
 	programs.
 
 ##  For assignment 03 (Bash scripts)

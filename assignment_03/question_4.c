@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 /* Name: Antonio Pedro
 Roll Number: 2020028
@@ -7,17 +8,17 @@ Roll Number: 2020028
 
 //helper function to show the array
 
-void show_array(int array[], int i) {
+void show_array(int array[], int i, int size) {
     printf("SORTED: ");
-    for (i = 0; i<=sizeof(array) - 1; i++)
+    for (i = 0; i<= size - 1; i++)
         printf("%d ", array[i]);
     printf("\n");
 }
 //function to sort the array
-void bubble_sort(int array[]) {
+void bubble_sort(int array[], int size) {
     int j, i, aux;
 
-    for (j = 1; j <= sizeof(array) - 1; j++) {
+    for (j = 1; j <= size - 1; j++) {
         for (i=4; i>=j; i--) {
             if (array[i] < array[i - 1]) {
                 aux = array[i];
@@ -27,27 +28,28 @@ void bubble_sort(int array[]) {
         }
     }
 
-    show_array(array, i);
+    show_array(array, i, size);
 }
 
-void insertion_sort(int array[]) {
+void insertion_sort(int array[], int size) {
     int j, i, chosen;
-    for (i=1; i <=sizeof(array)-1; i++) {
+    for (i=1; i <= size-1; i++) {
         chosen = array[i];
         j = j - 1;
-         while (j >= 0 && array[j] > chosen) {
+        
+	while (j >= 0 && array[j] > chosen) {
             array[j + 1] = array[j];
             j = j - 1;
         }
         array[j + 1] = chosen;
     }
-    show_array(array, i);
+    show_array(array, i, size);
 }
 
 int main() {
     int op;
     int array[5] = {12, 1, 30, 20, 5};
-
+    int size = sizeof(array)/sizeof(array[0]);
     while (op != -1) {
             printf(" ================== Type ================\n");
             printf(" =========== 1. for Bubble Sort =========\n");
@@ -61,14 +63,14 @@ int main() {
             printf(" =======================================\n");
             printf(" ============= Bubble Sort =============\n");
             printf(" =======================================\n");
-            bubble_sort(array);
+            bubble_sort(array, size);
             break;
         case 2:
             printf(" =======================================\n");
             printf(" ============= Insertion Sort ==========\n");
             printf(" =======================================\n");
 
-            insertion_sort(array);
+            insertion_sort(array, size);
             break;
         default:
             printf("No option found\n");

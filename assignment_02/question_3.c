@@ -11,15 +11,15 @@
  */
 
 //for addiction
-void *add (int a, int b) {
+void add (int a, int b) {
     printf("Result = %d\n", a + b);
 }
 //for subtraction
-void *sub (int a, int b){
+void sub (int a, int b){
     printf("Result = %d\n", a -b);
 }
 //for division
-void *divi (int a, int b) {
+void divi (int a, int b) {
     float res = a / b;
     if (b != 0) {
         printf("Result = %2.f\n", res);
@@ -29,13 +29,13 @@ void *divi (int a, int b) {
 }
 
 //for multiplication
-void *mul (int a, int b) {
-    printf("Result = %d\n", a * b);
+void mul (int a, int b) {
+     printf("Result = %d\n", a * b);
 }
 
 //for exponentiation
-void *exponent (int a, int b) {
-    printf("Result = %d", pow(a, b));
+void exponent (int a, int b) {
+    printf("Result = %.2lf", pow((double)a, (double)b));
 }
 
 

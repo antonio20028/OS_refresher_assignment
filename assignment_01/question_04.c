@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 /*
 Name: Antonio Pedro
 Roll Number: 2020028
@@ -19,7 +19,7 @@ int getLen(char str[]) {
 
 char* reverse(char str[]){
     int end, i = 0;
-    char *reversed = malloc((getLen(str) + 1) * sizeof(char));//dynamically allocate a new char string
+    char* reversed = malloc((getLen(str) + 1) * sizeof(char));//dynamically allocate a new char string
 
     end = getLen(str) - 1; //the index of the last element of the array
 
@@ -38,7 +38,7 @@ int main() {
 
     printf("Enter a string: ");
     scanf("%s", s);
-    printf("Revered string: %s", reverse(s));
+    printf("Revered string: %s\n", reverse(s));
 
     return 0;
 }
