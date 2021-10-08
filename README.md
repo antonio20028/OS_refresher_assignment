@@ -3,14 +3,14 @@
 Those are some basic aspcts you have to consider before run any
 of the programs in this assignment.
 
-#IMPORTANT: I am assuming that the programs in this assignment, will be execute in Linux only.
+# IMPORTANT: I am assuming that the programs in this assignment, will be execute in Linux only.
 
 
 ## For assignment 01, 02, and 03:
 	use Makefile to create necessaries object to compile and execute all  
 	programs.
 
-##For assignment 03 (Bash scripts)
+##  For assignment 03 (Bash scripts)
 	Make sure you have jq installed. 
 
 ## Organization
